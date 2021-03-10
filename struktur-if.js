@@ -13,10 +13,6 @@ btnCek.onclick = function () {
     hasil.innerText = cekAngka(a,b);
 }
 
-// hasil.addEventListener("click", function (){});
-
-// hasil.innerText = "hasil";
-
 function cekAngka(a,b) {
     let aa = "";
     if(a == b){
@@ -25,7 +21,6 @@ function cekAngka(a,b) {
         aa = "a lebih besar dari b";
     }else if (a < b) {
         aa= "B lebih besar dari a";
-        "asu ";
     }
     return aa;
 }
