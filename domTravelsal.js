@@ -18,9 +18,12 @@ const tutup = document.querySelectorAll('.close');
     
 // }
 
+// prefentDefault = menghentikan aksi default nya
+
 tutup.forEach(function(el){
     el.addEventListener('click', function(e){
         e.target.parentElement.style.display = 'none';
+        e.preventDefault();
     });
 });
 
