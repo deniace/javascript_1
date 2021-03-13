@@ -20,13 +20,35 @@ const tutup = document.querySelectorAll('.close');
 
 // prefentDefault = menghentikan aksi default nya
 
-tutup.forEach(function(el){
-    el.addEventListener('click', function(e){
+// event bubling adalah event yang dijalankan di parent  nya
+
+// tutup.forEach(function(el){
+//     el.addEventListener('click', function(e){
+//         e.target.parentElement.style.display = 'none';
+//         e.preventDefault(); // menghentikan aksi default
+//         e.stopPropagation(); // menghentikan event parent
+//     });
+// });
+
+// const cards = document.querySelectorAll('.card');
+
+// cards.forEach(function(card){
+//     card.addEventListener('click', function(e){
+//         alert("card");
+//     });
+// });
+// const nama = document.querySelector('.nama');
+
+// console.log(nama.parentElement.nextElementSibling.firstElementChild.nextElementSibling);
+
+
+
+// rewrite code
+
+const container = document.querySelector('.container');
+
+container.addEventListener('click', function(e){
+    if(e.target.className == "close"){
         e.target.parentElement.style.display = 'none';
-        e.preventDefault();
-    });
-});
-
-const nama = document.querySelector('.nama');
-
-console.log(nama.parentElement.nextElementSibling.firstElementChild.nextElementSibling);
+    }
+})
